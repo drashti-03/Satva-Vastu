@@ -1,0 +1,36 @@
+@use "sass:map";
+
+// Color Variables
+$dblue: rgba(27, 22, 66, 1);
+$lblue: rgb(210, 229, 255);
+$purple: rgb(102, 88, 234);
+$white: rgba(255, 255, 255, 1);
+$lwhite: rgba(255, 255, 254, 1);
+$simple: rgba(104, 125, 237, 1);
+$black: rgba(27, 22, 66, 1);
+$pgreen: rgba(16, 116, 58, 1);
+$orange: rgba(255, 194, 103, 1);
+$lorange: rgba(255, 194, 103, 0.8);
+$grey: rgba(66, 66, 66, 1);
+$lgrey: rgb(83, 83, 83);
+$red: rgb(255, 0, 0);
+$babypink: rgba(255, 204, 204, 1);
+$yellow: rgb(222, 170, 8);
+
+// Font Variables
+$dmserif: "DM Serif Display", serif;
+$dmsans: "DM Sans", sans-serif;
+$inter: "Inter", sans-serif;
+$playfair: "Playfair Display", serif;
+
+// Font Weight Map
+$weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
+
+// Utility Functions
+@function weight($weight-name) {
+  @return map.get($weights, $weight-name);
+}

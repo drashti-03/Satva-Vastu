@@ -1,0 +1,85 @@
+// Import variables and utilities
+@use "../variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap");
+
+.redline {
+  border: 3px solid $red;
+  opacity: 0.85;
+  margin: 0px;
+  width: 94%;
+}
+
+.vectortext {
+  color: $pgreen;
+  font-weight: bold;
+  font-family: $inter;
+}
+
+.mainlogo-f {
+  max-height: 80px;
+  max-width: 300px;
+  margin-left: 20px;
+}
+
+.leftlogo {
+  margin-bottom: 7px;
+  max-width: 100%;
+}
+
+.rightlogo {
+  width: 100%;
+}
+
+.vectorimg {
+  width: 100%;
+  height: auto;
+}
+
+.vectortext {
+  color: rgb(16, 116, 58);
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.para-f {
+  font-size: 22px;
+  font-family: $inter;
+  color: $dblue;
+  font-weight: weight(regular);
+  text-align: left;
+  width: 30%;
+  line-height: 39px;
+  margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .vectorimg {
+    width: 170px;
+  }
+
+  .vectortext {
+    font-size: 12px;
+  }
+
+  .navbar {
+    padding: 2%;
+  }
+
+  .para-f {
+    font-size: 18px;
+    width: 80%;
+  }
+
+  .redline {
+    width: 77%;
+  }
+}
+
+.footer {
+  background-color: #e8f2ff;
+  min-height: 270px;
+}

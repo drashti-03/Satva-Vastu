@@ -1,0 +1,154 @@
+@import "../_variables.scss";
+
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: $dblue;
+  background-image: url('/assets/images/Topography.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $black;
+  font-family: $inter;
+  padding: 4rem 2rem 2rem 2rem;
+  min-height: 700px;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%);
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    padding: 2.5rem 1rem 1.5rem 1rem;
+    min-height: 500px;
+  }
+  @media (max-width: 600px) {
+    padding: 1.5rem 0.5rem 1rem 0.5rem;
+    min-height: 350px;
+  }
+}
+
+.about-content {
+  flex: 1 1 400px;
+  max-width: 600px;
+  padding-right: 2rem;
+  z-index: 2;
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+.about-title {
+  font-family: $playfair;
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+  color: $black;
+  font-weight: weight("bold");
+  letter-spacing: 0.5px;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 480px) {
+    font-size: 1.3rem;
+  }
+}
+
+.about-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: $black;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+}
+
+.about-features {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.2rem;
+  @media (max-width: 600px) {
+    gap: 0.7rem;
+  }
+}
+
+.about-features li {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: $black;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.health-icon {
+  background-image: url('/assets/images/Water-Drop--Streamline-Sharp.svg');
+}
+.career-icon {
+  background-image: url('/assets/images/compass.jpg');
+}
+.wealth-icon {
+  background-image: url('/assets/images/Gold--Streamline-Core.svg');
+}
+.relationships-icon {
+  background-image: url('/assets/images/Fire-Hazard--Streamline-Guidance.svg');
+}
+
+.about-bold-text {
+  font-weight: weight("bold");
+  font-size: 1.15rem;
+  margin-top: 1.5rem;
+  color: $black;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+}
+
+.about-image-container {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background: none;
+  border: none;
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  background: $white;
+  @media (max-width: 600px) {
+    max-width: 220px;
+  }
+} 

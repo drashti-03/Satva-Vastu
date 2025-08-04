@@ -1,0 +1,210 @@
+@import "../_variables.scss";
+
+.services-section {
+  background-color: $lblue;
+  background-image: url('/assets/images/Topography.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 3rem 2rem;
+  color: $black;
+  font-family: $inter;
+  position: relative;
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 96%);
+  margin-top: -2vw;
+  padding-top: 2vw;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .services-title {
+    font-family: $playfair;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: $black;
+    letter-spacing: 0.5px;
+    font-weight: weight("bold");
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+    @media (max-width: 480px) {
+      font-size: 1.3rem;
+    }
+  }
+
+  .services-cards {
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1.5rem;
+    .services-swiper {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+
+  .card.swiper-slide {
+    background: $white;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    transition: box-shadow 0.2s;
+    min-height: 340px;
+    min-width: 260px;
+    max-width: 320px;
+    margin: 0 auto;
+    scroll-snap-align: start;
+    overflow: hidden;
+    &:hover {
+      box-shadow: 0 8px 24px rgba(26, 26, 61, 0.15);
+    }
+    .card-img-top {
+      width: 100%;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $lblue;
+      img.brand-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0;
+      }
+    }
+    .card-title {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 1.5rem;
+      margin-top: 1.2rem;
+      padding-top: 0.5rem;
+      width: calc(100% - 3rem);
+      .brand img.stripe-logo {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+      }
+      .rightarrow svg {
+        color: $dblue;
+        width: 28px;
+        height: 28px;
+      }
+    }
+    .card-body {
+      font-size: 1rem;
+      color: $black;
+      margin-bottom: 1.2rem;
+      margin-top: 0.5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      padding-bottom: 0.5rem;
+      padding-top: 0;
+      font-family: $inter;
+      text-align: left;
+      min-height: 60px;
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  // Swiper pagination dots
+  .swiper-pagination-bullet {
+    background: $black;
+    opacity: 0.3;
+    &-active {
+      background: $black;
+      opacity: 1;
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 1024px) {
+    padding: 2.5rem 0.5rem;
+    .card.swiper-slide {
+      min-width: 200px;
+      max-width: 260px;
+    }
+    .services-title {
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 768px) {
+    padding: 2rem 0.2rem;
+    .services-title {
+      font-size: 1.5rem;
+    }
+    .card.swiper-slide {
+      min-width: 160px;
+      max-width: 200px;
+      .card-img-top {
+        height: 100px;
+      }
+      .card-title {
+        margin: 0 0.7rem;
+        width: calc(100% - 1.4rem);
+        .brand img.stripe-logo {
+          width: 28px;
+          height: 28px;
+        }
+        .rightarrow svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .card-body {
+        font-size: 0.85rem;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+      }
+    }
+    .services-cards {
+      gap: 1rem;
+    }
+  }
+  @media (max-width: 480px) {
+    padding: 1rem 0;
+    .services-title {
+      font-size: 1.1rem;
+    }
+    .card.swiper-slide {
+      min-width: 120px;
+      max-width: 160px;
+      .card-img-top {
+        height: 60px;
+      }
+      .card-title {
+        margin: 0 0.3rem;
+        width: calc(100% - 0.6rem);
+        .brand img.stripe-logo {
+          width: 18px;
+          height: 18px;
+        }
+        .rightarrow svg {
+          width: 14px;
+          height: 14px;
+        }
+      }
+      .card-body {
+        font-size: 0.7rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+      }
+    }
+    .services-cards {
+      gap: 0.5rem;
+    }
+  }
+} 

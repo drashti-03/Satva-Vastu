@@ -1,0 +1,152 @@
+@use "../variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap");
+
+.vastu-section {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.vastu-heading {
+  width: 125%;
+  // margin-left: 80px;
+  font-family: $playfair;
+  font-weight: weight(regular);
+  font-size: 64px;
+  line-height: 69px;
+  color: $dblue;
+}
+
+// .heading1 {
+//   font-family: $playfair;
+//   font-weight: weight(regular);
+//   font-size: 64px;
+//   line-height: 69px;
+//   color: $dblue;
+// }
+
+.subheading {
+  @extend .vastu-heading;
+  font-size: 38px;
+  line-height: 39px;
+  width: 100%;
+}
+
+li,
+.aims-title {
+  font-size: 22px;
+  font-family: $inter;
+  color: $dblue;
+  font-weight: weight(medium);
+}
+
+.vastu-image {
+  flex: 1;
+}
+
+.vastu-diagram {
+  max-width: 100%;
+  height: auto;
+  border-radius: 208px;
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  justify-self: center;
+  margin-top: 80px;
+}
+
+.vastu-text {
+  flex: 1;
+  margin-top: 100px;
+}
+
+.title {
+  color: $dblue;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: $dblue;
+  margin-bottom: 1rem;
+}
+
+.features,
+.aims {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.bi-chevron-right {
+  margin-right: 0.5rem;
+  color: $yellow;
+  stroke: $yellow;
+}
+
+.bi-check2 {
+  margin-right: 0.5rem;
+  color: $yellow;
+  stroke: $yellow;
+}
+
+.aims-title {
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+.container {
+  max-height: none;
+}
+
+@media (max-width: 1400px) {
+  .vastu-heading {
+    font-size: 54px;
+    width: 128%;
+    // margin-left: 0%;
+  }
+
+  .subheading {
+    font-size: 48px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .vastu-heading {
+    font-size: 54px;
+    width: 115%;
+    // margin-left: 0%;
+  }
+
+  .subheading {
+    font-size: 48px;
+    width: 100%;
+    line-height: 39px;
+  }
+}
+
+@media (max-width: 690px) {
+  .vastu-heading {
+    font-size: 38px;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 425px) {
+  li {
+    font-size: 18px;
+  }
+
+  .subheading {
+    font-size: 32px;
+  }
+
+  .vastu-heading {
+    width: 100%;
+  }
+
+  .vastu-diagram {
+    height: 280px;
+  }
+}

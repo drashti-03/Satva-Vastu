@@ -1,0 +1,59 @@
+@use "../variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap");
+
+.container-3 {
+  clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+  background: $lblue;
+  height: 655px;
+  width: 100%;
+  place-items: center;
+  place-content: center;
+}
+
+.heading {
+  font-family: $playfair;
+  font-weight: weight(regular);
+  font-size: 72px;
+  line-height: 69px;
+  color: $dblue;
+}
+
+.para-ex {
+  font-size: 32px;
+  font-family: $inter;
+  color: $dblue;
+  font-weight: weight(medium);
+  text-align: center;
+  width: 70%;
+  line-height: 39px;
+  justify-self: center;
+}
+
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 54px;
+    line-height: 52px;
+  }
+}
+
+@media (max-width: 690px) {
+  .heading {
+    font-size: 42px;
+    line-height: 43px;
+  }
+
+  .para-ex {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 631px) {
+  .heading {
+    font-size: 38px;
+    line-height: normal;
+  }
+
+  .para-ex {
+    font-size: 18px;
+  }
+}

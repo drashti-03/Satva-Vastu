@@ -1,0 +1,151 @@
+@use "../variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap");
+
+.vastu-section {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.satva-heading {
+  width: 125%;
+  // margin-left: 80px;
+  font-family: $playfair;
+  font-weight: weight(regular);
+  font-size: 64px;
+  line-height: 69px;
+  color: $dblue;
+}
+
+.subheading {
+  @extend .satva-heading;
+  font-size: 38px;
+  line-height: 39px;
+  width: 100%;
+}
+
+.satvalist,
+.aims-title,
+.para {
+  font-size: 22px;
+  font-family: $inter;
+  color: $dblue;
+  font-weight: weight(medium);
+}
+
+.vastu-image {
+  flex: 1;
+}
+
+.vastu-diagramm {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  justify-self: center;
+  margin-top: 80px;
+}
+
+.vastu-text {
+  flex: 1;
+  margin-top: 100px;
+}
+
+.title {
+  color: $dblue;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: $dblue;
+  margin-bottom: 1rem;
+}
+
+.features,
+.aims {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.bi-chevron-right {
+  margin-right: 0.5rem;
+  color: $yellow;
+  stroke: $yellow;
+}
+
+.bi-check2 {
+  margin-right: 0.5rem;
+  color: $yellow;
+  stroke: $yellow;
+}
+
+.aims-title {
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+.container {
+  max-height: none;
+}
+
+@media (max-width: 1400px) {
+  .satva-heading {
+    font-size: 54px;
+    width: 128%;
+    // margin-left: 0%;
+  }
+
+  .subheading {
+    font-size: 48px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .satva-heading {
+    font-size: 54px;
+    width: 123%;
+    // margin-left: 0%;
+  }
+
+  .subheading {
+    font-size: 48px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .satva-heading {
+    width: 100%;
+    font-size: 54px;
+    line-height: normal;
+  }
+
+  .subheading {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .satva-heading {
+    width: 100%;
+    font-size: 54px;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 631px) {
+  .satva-heading {
+    width: 100%;
+    font-size: 38px;
+    line-height: normal;
+  }
+
+  .satvalist,
+  .para {
+    font-size: 18px;
+  }
+}

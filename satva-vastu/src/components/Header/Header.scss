@@ -1,0 +1,326 @@
+// Import variables and utilities
+@use "../variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap");
+
+// Container 1 (Hero Background)
+.navbar {
+  // clip-path: polygon(0 0, 100% 0, 100% 82%, 0% 100%);
+  background: $lblue;
+  // height: 900px;
+  width: 100%;
+}
+
+.redline {
+  border: 3px solid $red;
+  opacity: 0.85;
+  margin: 0px;
+  width: 94%;
+}
+
+.vectortext {
+  color: $pgreen;
+  font-weight: bold;
+  font-family: $inter;
+}
+
+.container {
+  border-radius: 20px;
+  background: rgba($color: #ffffff, $alpha: 0.8);
+  max-height: 100px;
+}
+
+.mainlogo {
+  max-height: 80px;
+  max-width: 300px;
+}
+
+.leftlogo {
+  margin-bottom: 7px;
+  max-width: 100%;
+}
+
+.rightlogo {
+  width: 100%;
+}
+
+.vectorimg {
+  width: 100%;
+  height: auto;
+}
+
+.vectortext {
+  color: rgb(16, 116, 58);
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .vectorimg {
+    width: 170px;
+  }
+
+  .vectortext {
+    font-size: 12px;
+  }
+
+  .navbar {
+    padding: 2%;
+  }
+}
+
+/* Header.css
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap");
+
+:root {
+  --dark-blue: #1b1642;
+  --light-blue: #d2e5ff;
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "Playfair Display", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+}
+
+.hero {
+  background-color: var(--dark-blue);
+  color: var(--light-blue);
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-column .logo {
+  height: 60px;
+  width: auto;
+}
+
+.text-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-column .row-1 {
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.text-column .row-2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: var(--light-blue);
+  font-weight: 600;
+}
+
+.navbar-links li a:hover {
+  text-decoration: underline;
+}
+
+.hero-content {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-family: var(--font-secondary);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-content .tagline {
+  font-size: 1.2rem;
+}
+
+.hero-content .hero-keywords {
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.hero-button {
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hero-button:hover {
+  background-color: white;
+}
+
+/* Responsive Design */
+/*@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content .tagline {
+    font-size: 1rem;
+  }
+
+  .hero-button {
+    font-size: 0.9rem;
+  }
+} */
+
+// // Import variables and utilities
+// @import "./variables";
+
+// // Container 1 (Hero Background)
+// .container-1 {
+//   clip-path: polygon(0 0, 100% 0, 100% 82%, 0% 100%);
+//   background: rgba(243, 248, 255, 1);
+//   height: 900px;
+// }
+
+// Navbar Styles
+// .navbar {
+//   .navbar-brand {
+//     font-family: $dmserif;
+//     color: $dblue;
+//     font-size: 28px;
+
+//     &.logo-hide {
+//       font-size: 39px;
+//     }
+//   }
+
+//   .nav-link {
+//     font-size: 28px;
+//     color: $dblue;
+
+//     &.side {
+//       font-size: 20px;
+//     }
+//   }
+// }
+
+// .redline {
+//   border: 3px solid $red;
+//   opacity: 0.85;
+// }
+
+// // Hero Content
+// .heading {
+//   font-family: $dmserif;
+//   font-weight: weight(regular);
+//   font-size: 64px;
+//   line-height: 69px;
+//   color: $dblue;
+
+//   .modern {
+//     color: $dblue;
+//   }
+
+//   .simple {
+//     color: $simple;
+//   }
+// }
+
+// .text1 {
+//   font-size: 20px;
+//   line-height: 32px;
+//   color: $dblue;
+//   max-width: 440px;
+// }
+
+// .buttons {
+//   .button {
+//     box-shadow: 0px 14px 24px 0px rgba(27, 22, 66, 0.2);
+//     border: none;
+//     border-top-left-radius: 8px;
+//     border-bottom-right-radius: 8px;
+//     font-family: $dmsans;
+//     padding: 10px;
+//     font-size: 18px;
+//     font-weight: weight(medium);
+//     line-height: 28px;
+//     letter-spacing: -0.01em;
+//     text-align: center;
+//     width: 118px;
+
+//     &.getstarted {
+//       background-color: $purple;
+//       color: $white;
+//     }
+
+//     &.learnmore {
+//       color: $purple;
+//       background-color: $white;
+//     }
+//   }
+// }
+
+// // Image Styling
+// .illustration {
+//   height: auto;
+//   margin-left: -50px;
+// }
+
+// // Responsive Styling
+// @media (max-width: 1399px) {
+//   .heading {
+//     font-size: 52px;
+//     line-height: 49px;
+//   }
+
+//   .text1 {
+//     font-size: 18px;
+//     line-height: 26px;
+//   }
+
+//   .illustration {
+//     margin-left: -30px;
+//   }
+// }
+
+// @media (max-width: 1199px) {
+//   .illustration {
+//     height: 400px;
+//     margin-left: -60px;
+//   }
+// }

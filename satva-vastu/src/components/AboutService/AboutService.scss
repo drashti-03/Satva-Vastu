@@ -1,0 +1,596 @@
+@use "../_variables.scss" as *;
+@use "swiper/css";
+@use "swiper/css/pagination";
+
+// .aboutservice-page {
+//   width: 100%;
+//   min-height: 100vh;
+//   background: $lblue;
+// }
+
+// .about-section-custom {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+//   align-items: center;
+//   background: $dblue;
+//   background-image: url("/assets/images/Topography.png");
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+//   color: $white;
+//   font-family: $inter;
+//   padding: 4rem 2rem 2rem 2rem;
+//   min-height: 700px;
+//   position: relative;
+//   clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%);
+//   margin-bottom: 0;
+//   padding-bottom: 0;
+
+//   @media (max-width: 1024px) {
+//     flex-direction: column;
+//     padding: 2.5rem 1rem 1.5rem 1rem;
+//     min-height: 500px;
+//   }
+//   @media (max-width: 600px) {
+//     padding: 1.5rem 0.5rem 1rem 0.5rem;
+//     min-height: 350px;
+//   }
+// }
+
+// .about-content-custom {
+//   flex: 1 1 400px;
+//   max-width: 600px;
+//   padding-right: 2rem;
+//   z-index: 2;
+//   color: $white;
+//   @media (max-width: 1024px) {
+//     max-width: 100%;
+//     padding-right: 0;
+//     margin-bottom: 2rem;
+//   }
+// }
+
+// .about-title-custom {
+//   font-family: $playfair;
+//   font-size: 2.8rem;
+//   margin-bottom: 1.2rem;
+//   color: $white;
+//   font-weight: weight("bold");
+//   letter-spacing: 0.5px;
+//   @media (max-width: 768px) {
+//     font-size: 2rem;
+//   }
+//   @media (max-width: 480px) {
+//     font-size: 1.3rem;
+//   }
+// }
+
+// .about-text-custom {
+//   font-size: 1.15rem;
+//   line-height: 1.7;
+//   margin-bottom: 1rem;
+//   color: $white;
+//   @media (max-width: 768px) {
+//     font-size: 1rem;
+//   }
+//   @media (max-width: 480px) {
+//     font-size: 0.9rem;
+//   }
+// }
+
+// .about-features-custom {
+//   list-style: none;
+//   padding: 0;
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 1.5rem;
+//   margin-bottom: 1.2rem;
+//   @media (max-width: 600px) {
+//     gap: 0.7rem;
+//   }
+// }
+
+// .about-features-custom li {
+//   display: flex;
+//   align-items: center;
+//   font-weight: 600;
+//   font-size: 1.1rem;
+//   color: $white;
+//   @media (max-width: 768px) {
+//     font-size: 1rem;
+//   }
+//   @media (max-width: 480px) {
+//     font-size: 0.85rem;
+//   }
+// }
+
+// .icon {
+//   display: inline-block;
+//   width: 24px;
+//   height: 24px;
+//   margin-right: 0.5rem;
+//   background-size: contain;
+//   background-repeat: no-repeat;
+// }
+
+// .health-icon {
+//   background-image: url("/assets/images/Water-Drop--Streamline-Sharp.svg");
+// }
+// .career-icon {
+//   background-image: url("/assets/images/compass.jpg");
+// }
+// .wealth-icon {
+//   background-image: url("/assets/images/Gold--Streamline-Core.svg");
+// }
+// .relationships-icon {
+//   background-image: url("/assets/images/Fire-Hazard--Streamline-Guidance.svg");
+// }
+
+// .about-bold-text-custom {
+//   font-weight: weight("bold");
+//   font-size: 1.15rem;
+//   margin-top: 1.5rem;
+//   color: $white;
+//   @media (max-width: 768px) {
+//     font-size: 1rem;
+//   }
+//   @media (max-width: 480px) {
+//     font-size: 0.9rem;
+//   }
+// }
+
+// .about-image-container-custom {
+//   flex: 1 1 300px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   z-index: 2;
+//   background: none;
+//   border: none;
+// }
+
+// .about-image-custom {
+//   max-width: 100%;
+//   height: auto;
+//   border-radius: 20px;
+//   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+//   background: $white;
+//   @media (max-width: 600px) {
+//     max-width: 220px;
+//   }
+// }
+
+// .services-section-custom {
+//   background-color: $lblue;
+//   background-image: url("/assets/images/Topography.png");
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+//   position: relative;
+//   clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 96%);
+//   margin-top: -2vw;
+//   padding-top: 2vw;
+//   color: $black;
+//   padding-bottom: 4rem;
+// }
+
+// .services-title-custom {
+//   font-family: $playfair;
+//   font-size: 2.5rem;
+//   margin-bottom: 2rem;
+//   text-align: center;
+//   color: $black;
+//   letter-spacing: 0.5px;
+//   font-weight: weight("bold");
+//   @media (max-width: 768px) {
+//     font-size: 2rem;
+//   }
+//   @media (max-width: 480px) {
+//     font-size: 1.3rem;
+//   }
+// }
+
+// .cards.swiper {
+//   width: 100%;
+//   height: 100%;
+//   z-index: 4;
+// }
+
+// .swiper-slide {
+//   text-align: center;
+//   font-size: 18px;
+//   background: #fff;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: auto;
+// }
+
+// .swiper-wrapper {
+//   margin-bottom: 70px;
+// }
+
+// .card {
+//   border-radius: 16px;
+//   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+//   display: flex;
+//   flex-direction: column;
+//   align-items: stretch;
+//   text-align: left;
+//   min-height: 340px;
+//   min-width: 260px;
+//   max-width: 320px;
+//   margin: 0 1rem;
+//   overflow: hidden;
+//   background: $white;
+//   @media (max-width: 1024px) {
+//     min-width: 200px;
+//     max-width: 260px;
+//   }
+//   @media (max-width: 768px) {
+//     min-width: 160px;
+//     max-width: 200px;
+//   }
+//   @media (max-width: 480px) {
+//     min-width: 120px;
+//     max-width: 160px;
+//   }
+// }
+
+// .card-img-top {
+//   width: 100%;
+//   height: 160px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background: $lblue;
+//   img.brand-image {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+//     border-radius: 0;
+//   }
+// }
+
+// .card-title {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin: 0 1.5rem;
+//   margin-top: 1.2rem;
+//   padding-top: 0.5rem;
+//   width: calc(100% - 3rem);
+//   .brand img.stripe-logo {
+//     width: 40px;
+//     height: 40px;
+//     object-fit: contain;
+//   }
+//   .rightarrow svg {
+//     color: $dblue;
+//     width: 28px;
+//     height: 28px;
+//   }
+// }
+
+// .card-body {
+//   font-size: 1rem;
+//   color: $black;
+//   margin-bottom: 1.2rem;
+//   margin-top: 0.5rem;
+//   padding-left: 1.5rem;
+//   padding-right: 1.5rem;
+//   padding-bottom: 0.5rem;
+//   padding-top: 0;
+//   font-family: $inter;
+//   text-align: left;
+//   min-height: 60px;
+//   display: flex;
+//   align-items: flex-start;
+// }
+
+// @media (max-width: 768px) {
+//   .about-section-custom {
+//     flex-direction: column;
+//     padding: 2.5rem 1rem 1.5rem 1rem;
+//     min-height: 500px;
+//   }
+//   .about-title-custom {
+//     font-size: 2rem;
+//   }
+//   .card {
+//     min-width: 160px;
+//     max-width: 200px;
+//   }
+//   .card-img-top {
+//     height: 100px;
+//   }
+//   .card-title {
+//     margin: 0 0.7rem;
+//     width: calc(100% - 1.4rem);
+//     .brand img.stripe-logo {
+//       width: 28px;
+//       height: 28px;
+//     }
+//     .rightarrow svg {
+//       width: 20px;
+//       height: 20px;
+//     }
+//   }
+//   .card-body {
+//     font-size: 0.85rem;
+//     padding-left: 0.7rem;
+//     padding-right: 0.7rem;
+//   }
+// }
+
+// @media (max-width: 480px) {
+//   .about-section-custom {
+//     padding: 1.5rem 0.5rem 1rem 0.5rem;
+//     min-height: 350px;
+//   }
+//   .about-title-custom {
+//     font-size: 1.3rem;
+//   }
+//   .card {
+//     min-width: 120px;
+//     max-width: 160px;
+//   }
+//   .card-img-top {
+//     height: 60px;
+//   }
+//   .card-title {
+//     margin: 0 0.3rem;
+//     width: calc(100% - 0.6rem);
+//     .brand img.stripe-logo {
+//       width: 18px;
+//       height: 18px;
+//     }
+//     .rightarrow svg {
+//       width: 14px;
+//       height: 14px;
+//     }
+//   }
+//   .card-body {
+//     font-size: 0.7rem;
+//     padding-left: 0.3rem;
+//     padding-right: 0.3rem;
+//   }
+// }
+
+.aboutservice {
+  background: $lblue;
+  background-image: url("assets/images/Topography.png");
+  color: $white;
+  height: 1750px;
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+  position: relative;
+  align-items: normal;
+}
+
+.container-2 {
+  background: $lblue;
+  width: 100%;
+}
+
+.about-diagram {
+  max-width: 100%;
+  height: auto;
+  justify-self: center;
+  margin-top: 80px;
+}
+
+.about-text {
+  flex: 1;
+  margin-top: 200px;
+}
+
+.bullet {
+  margin-right: 13px;
+}
+
+.about-heading {
+  width: 100%;
+  // margin-left: 80px;
+  font-family: $playfair;
+  font-weight: weight(regular);
+  font-size: 64px;
+  line-height: 69px;
+  color: $dblue;
+  margin-bottom: 20px;
+}
+
+.card {
+  border-radius: 0px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 4px solid $black;
+  max-width: 270px;
+  max-height: 392px;
+}
+
+.brand {
+  margin-top: 4px;
+}
+
+.brand-image {
+  border-top-left-radius: 18px;
+  clip-path: polygon(0 0, 100% 0%, 100% 92%, 0% 100%);
+}
+
+.rightarrow {
+  font-size: x-large;
+}
+
+.svgarrow {
+  vertical-align: 0;
+}
+
+.text4 {
+  font-weight: weight(regular);
+  color: $dblue;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.our-service {
+  // margin-left: 80px;
+  font-family: $playfair;
+  font-weight: weight(regular);
+  font-size: 64px;
+  line-height: 69px;
+  color: $dblue;
+  align-self: center;
+}
+
+.service-card {
+  margin-bottom: 50px;
+}
+
+.scroll-card {
+  margin-left: -170px;
+}
+
+.swiper {
+  // width: 100%;
+  // height: 100%;
+  z-index: 4;
+
+  &-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+  }
+
+  // &-wrapper {
+  //   margin-bottom: 70px;
+  // }
+}
+
+@media (max-width: 1200px) {
+  .aboutservice {
+    height: 1924px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-heading {
+    font-size: 54px;
+    line-height: 52px;
+  }
+
+  .service-card {
+    font-size: 54px;
+    line-height: 52px;
+  }
+
+  .scroll-card {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  .aboutservice {
+    height: 2254px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-text {
+    margin-top: 0px;
+  }
+
+  .scroll-card {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 217px;
+  }
+
+  .about-image {
+    flex: none;
+    margin-top: 110px;
+  }
+
+  .about-text {
+    flex: 1;
+    margin-top: 10px;
+  }
+
+  .aboutservice {
+    height: 2360px;
+  }
+
+  .about-heading {
+    font-size: 54px;
+    line-height: 43px;
+    margin-bottom: 30px;
+  }
+
+  .scroll-card {
+    margin-left: 30px;
+  }
+
+  .service-card {
+    font-size: 42px;
+    line-height: 43px;
+  }
+
+  .servicecard {
+    width: 240px;
+  }
+}
+
+@media (max-width: 631px) {
+  .about-heading {
+    font-size: 38px;
+    line-height: normal;
+  }
+
+  .service-card {
+    font-size: 38px;
+    line-height: normal;
+  }
+
+  .servicecard {
+    width: 220px;
+  }
+
+  .scroll-card {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 524px) {
+  .aboutservice {
+    height: 2091px;
+  }
+
+  .card {
+    width: 180px;
+  }
+
+  .servicecard {
+    width: 200px;
+  }
+
+  .about-image {
+    flex: none;
+    margin-top: 0px;
+  }
+
+  .scroll-card {
+    margin-left: 50px;
+  }
+}
