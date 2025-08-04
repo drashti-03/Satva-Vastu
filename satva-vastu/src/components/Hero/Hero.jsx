@@ -35,13 +35,13 @@ const Hero = () => {
           <Swiper
             spaceBetween={30}
             centeredSlides={true}
-            // autoplay={{
-            //   delay: 3500,
-            //   disableOnInteraction: false,
-            // }}
-            // pagination={{
-            //   clickable: true,
-            // }}
+            autoplay={{
+            delay: 3500,
+            disableOnInteraction: false,
+            }}
+            pagination={{
+            clickable: true,
+            }}
             modules={[Autoplay]}
             className="mySwiper"
           >
